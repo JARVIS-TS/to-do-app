@@ -1,0 +1,26 @@
+<%- include('partials/header.ejs') %>
+    <div class="container-2 body">
+        <h2>TO-DO List <img src="/images/images/icon.png"></h2>
+        <div class="row">
+        <form action="/" method="POST">
+            
+                <input type="text" name="newEvent" id="input-box" placeholder=" Add Your Event" autocomplete="off">
+                <button type="submit"class="add"> Add</button>
+                </div>
+                <ul id="list-container">
+                <% for(var i=0 ; i <newEventItem.length ; i++){ %>
+                    
+                    <li class="position-li">
+                        <input type="checkbox" name="packersOff" id="packers" value="1"/ >
+                        <label for="packers" class="strikethrough"><%= newEventItem[i]%></label>
+                        
+                    </li>
+                    
+                    <%}%>
+                        
+            </ul>
+        </form>
+        
+        </div>
+    </div>
+    <%- include('partials/footer.ejs') %>
